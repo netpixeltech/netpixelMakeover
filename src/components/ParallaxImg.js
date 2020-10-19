@@ -1,0 +1,20 @@
+import React from 'react'
+import { Parallax } from 'react-parallax';
+
+function ParallaxImg({imgtitle,img}) {
+    return (
+        <Parallax
+        blur={0}
+        bgImage={img}
+        bgImageAlt="the cat"
+        strength={700}
+        >
+           
+        <div className="img parallax ">
+            <p style={{color:"white"}}>{imgtitle}</p>
+        </div>
+    </Parallax>
+    )
+}
+
+export default ParallaxImg

@@ -14,9 +14,15 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.24.79",
+    "bootstrap": "^4.5.3",
+    "gatsby": "^2.24.80",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "jquery": "^1.11.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-parallax": "^3.0.3",
+    "simple-parallax-js": "^5.6.2"
   },
   "devDependencies": {
     "prettier": "2.1.2"
