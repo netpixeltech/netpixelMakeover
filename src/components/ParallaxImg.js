@@ -10,7 +10,7 @@ function ParallaxImg({imgtitle,img}) {
         strength={700}
         >
            
-        <div className="img parallax ">
+        <div className="parallax ">
             <p style={{color:"white"}}>{imgtitle}</p>
         </div>
     </Parallax>

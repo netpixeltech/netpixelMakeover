@@ -3,29 +3,27 @@ import {  Link } from "gatsby"
 function Navbar() {
 
     return (
-        
+
+<div className="container-fluid">
 <header>
     
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-brand ml-auto logo">
-                <Link>Reveka</Link>
-            </ul>
-            {/* <!-- social media plugins --> */}
-            <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-                <Link className="nav-link" to="/"><i class="fab fa-facebook"></i></Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/"><i class="fab fa-instagram"></i></Link>
-            </li>
-            </ul>  
-        </div>
-    </nav>
+   <div className="row logo">
+      
+            <div className="col-md-2">
 
-    <hr className="hr" style={{margin:0}}/>
-    
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+            </div>
+            <div className="col-md-8 text-center">
+                <h1>Reveka</h1>
+            </div>
+            <div className="col-md-2 social">
+               <Link to = "https://www.facebook.com/"><i class="fab fa-facebook"></i></Link> 
+               <Link to = "https://www.instagram.com/"><i class="fab fa-instagram"></i></Link> 
+            </div>
+
+        
+   </div>
+    <div className="row justify-content-center" >
+    <nav className="navbar navbar-expand-lg navbar-light">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -60,10 +58,11 @@ function Navbar() {
         
     </div>
     </nav>
+ 
+    </div>
+   
 
-
-</header>
-
+</header></div>
 
        
     )

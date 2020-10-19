@@ -8,6 +8,7 @@ import img6 from "../images/img7.jpg"
 import img7 from "../images/img8.jpg"
 import img8 from "../images/img1.jpg"
 import ParallaxImg from './ParallaxImg';
+import BottomImgs from './ParallaxBootom'
 
 function MyParallax() {
     return (
@@ -20,6 +21,7 @@ function MyParallax() {
             <ParallaxImg imgtitle={"Eclipse"} img={img6} />
             <ParallaxImg imgtitle={"Rocket"} img={img7} />
             <ParallaxImg imgtitle={"Cooking"} img={img8} />
+            <BottomImgs />
         </div>
     )
 }
