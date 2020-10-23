@@ -7,6 +7,7 @@ function ParallaxImg({imgtitle,img}) {
         blur={0}
         bgImage={img}
         bgImageAlt="the cat"
+        bgImageSize = "800px"
         strength={700}
         >
            

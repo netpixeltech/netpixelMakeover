@@ -1,5 +1,6 @@
 import React from 'react'
 import {  Link } from "gatsby"
+import logo from "../images/logo1.png"
 function Navbar() {
 
     return (
@@ -13,11 +14,11 @@ function Navbar() {
 
             </div>
             <div className="col-md-8 text-center">
-                <h1>Reveka</h1>
+                <img className="logoimg" src={logo} alt="reveka logo" />
             </div>
             <div className="col-md-2 social">
-               <Link to = "https://www.facebook.com/"><i class="fab fa-facebook"></i></Link> 
-               <Link to = "https://www.instagram.com/"><i class="fab fa-instagram"></i></Link> 
+               <a href = "https://www.facebook.com/" ><i className="fab fa-facebook"></i></a> 
+               <a href = "https://www.instagram.com/"><i className="fab fa-instagram"></i></a> 
             </div>
 
         
@@ -31,7 +32,7 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
         
         {/* <!-- routes  --> */}
-        <ul className="navbar-nav mx-auto">
+        <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
             <Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
         </li>

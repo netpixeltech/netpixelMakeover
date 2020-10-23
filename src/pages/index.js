@@ -6,6 +6,7 @@ import MyParallax from '../components/MyParallax'
 import { Parallax } from 'react-parallax';
 import HeroImg from "../images/img1.jpg"
 import ContactUs from '../components/Contact'
+import ContactForm from '../components/ContactForm'
 
 function Home() {
     return (
@@ -17,7 +18,6 @@ function Home() {
         bgImage={HeroImg}
         bgImageAlt="the cat"
         strength={400}
-        
         >
            
         <div className="hero-img">
@@ -32,6 +32,9 @@ function Home() {
         </div>
         
         <MyParallax />
+
+        <ContactForm />
+
         <ContactUs />
 
        <div className="row">

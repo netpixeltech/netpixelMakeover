@@ -1,26 +1,50 @@
 import React from 'react'
-import img1 from "../images/img2.jpg"
-import img2 from "../images/img3.jpg"
-import img3 from "../images/img4.jpg"
-import img4 from "../images/img5.jpg"
-import img5 from "../images/img6.jpg"
-import img6 from "../images/img7.jpg"
-import img7 from "../images/img8.jpg"
-import img8 from "../images/img1.jpg"
+import bridal from "../images/bridal.jpg"
+import cocktail from "../images/cocktail.jpg"
+import mehndi from "../images/mehndi.jpg"
+import reception from "../images/reception.jpg"
+
 import ParallaxImg from './ParallaxImg';
 import BottomImgs from './ParallaxBootom'
 
+import {graphql,useStaticQuery} from "gatsby"
+
 function MyParallax() {
+
+    const data=useStaticQuery(graphql`
+    query{
+        allSanityImagePost{
+            edges{
+              node{
+               title
+                mainImage{
+                  asset{
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+    `)
+
+    //   let resource = data.allSanityPost.edges[2].node;
     return (
         <div>
-            <ParallaxImg imgtitle={"Stars"} img={img1} />
-            <ParallaxImg imgtitle={"Architecture"} img={img2} />
-            <ParallaxImg imgtitle={"Food"} img={img3} />
-            <ParallaxImg imgtitle={"Nature"} img={img4} />
-            <ParallaxImg imgtitle={"Travelling"} img={img5} />
-            <ParallaxImg imgtitle={"Eclipse"} img={img6} />
-            <ParallaxImg imgtitle={"Rocket"} img={img7} />
-            <ParallaxImg imgtitle={"Cooking"} img={img8} />
+             {
+                data.allSanityImagePost.edges.map((post,index)=>{
+                  return <ParallaxImg key={index} imgtitle={post.node.title} img={post.node.mainImage.asset.url} />
+                })
+            }
+           
+             
+            <ParallaxImg imgtitle={"Bridal"} img={bridal} />
+            <ParallaxImg imgtitle={"Cocktail"} img={cocktail} />
+            <ParallaxImg imgtitle={"Mehnadi"} img={mehndi} />
+            <ParallaxImg imgtitle={"Reception"} img={reception} />
+           
+           
+            
             <BottomImgs />
         </div>
     )
