@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function Venue({selectedVenue}) {
+function Venue({selectedVenue,Back}) {
     const [venue, setVenue] = useState("")
 
     const handleChange = (e) =>{
@@ -37,7 +37,7 @@ function Venue({selectedVenue}) {
 
     <div className="row mt-5">
         <div className="col-sm-2">
-              {/* <button type="button" className="btn btn-primary">Back</button> */}
+              <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
         </div>
         <div className="col-sm-10">
               <div className="progress">

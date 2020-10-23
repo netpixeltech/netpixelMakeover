@@ -2,9 +2,9 @@ import React,{useState} from 'react'
 
 function Page1({select,display}) {
     const [optionSelected, setSelected] = useState({
-        f:false,
-        s:false,
-        t:false
+        bridal:false,
+        party:false,
+        commercial:false
     })
 ///////////////////////////continue//////////////////////////////////
 
@@ -15,20 +15,20 @@ function Page1({select,display}) {
 
             setSelected({
                 ...optionSelected,
-                f:!optionSelected.f
+                bridal:!optionSelected.bridal
             })
         }
         if (optionid===2) {
 
             setSelected({
                 ...optionSelected,
-                s:!optionSelected.s
+                party:!optionSelected.party
             })
         }
         if (optionid===3) {
             setSelected({
                 ...optionSelected,
-                t:!optionSelected.t
+                commercial:!optionSelected.commercial
             })
         }
 
@@ -47,13 +47,13 @@ function Page1({select,display}) {
                 </div>
         </div>
         <div id="" className="row mb-3">
-                <div className={"col-sm " + (optionSelected.f?"mystyle":"")}>
+                <div className={"col-sm " + (optionSelected.bridal?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(1)} className="service-option-1"  > 
                     <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" />
                    <h2>Bridal</h2>
                     </button>
                 </div>
-                <div className={"col-sm " + (optionSelected.s?"mystyle":"")}>
+                <div className={"col-sm " + (optionSelected.party?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(2)} className="service-option-1" > 
                     <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" />
                     <h2> Party</h2>
@@ -61,7 +61,7 @@ function Page1({select,display}) {
                 </div>
                
                 
-                <div className={"col-sm " + (optionSelected.t?"mystyle":"")}>
+                <div className={"col-sm " + (optionSelected.commercial?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(3)} className="service-option-1" > 
                     <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" />
                     <h2>Commercial</h2>
@@ -83,8 +83,8 @@ function Page1({select,display}) {
             </div>
         </div>
         <div className="row">
-            <div className="col-sm-2">
-                  <button type="button" className="btn btn-primary">Back</button>
+            <div className="col-sm-1">
+                  {/* <button type="button" className="btn btn-primary">Back</button> */}
             </div>
             <div className="col-sm-10">
                   <div className="progress">

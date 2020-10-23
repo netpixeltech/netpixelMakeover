@@ -1,7 +1,8 @@
 import React from 'react'
 
-function Time({selectedTime}) {
+function Time({selectedTime,Back}) {
     return (
+        <div>
         <div id="time">
             <div className="row" >
                 <div className="col-sm">
@@ -53,10 +54,11 @@ function Time({selectedTime}) {
                 </div>
                 
             </div>
-
+            </div>
+            
             <div className="row mt-5">
             <div className="col-sm-2">
-                {/* <button type="button" className="btn btn-primary">Back</button> */}
+                <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                 <div className="progress">

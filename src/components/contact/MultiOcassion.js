@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function MultiOcassion({selectedMulti}) {
+function MultiOcassion({selectedMulti,Back}) {
     const [msg,setmsg] = useState("")
 
     const handleChange=(e)=> {
@@ -38,7 +38,7 @@ function MultiOcassion({selectedMulti}) {
 
         <div className="row mt-5">
             <div className="col-sm-2">
-                  {/* <button type="button" className="btn btn-primary">Back</button> */}
+                  <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                   <div className="progress">

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import Calendar from "react-calendar"
 import 'react-calendar/dist/Calendar.css';
 
-function SelectDate({selectedDate}) {
+function SelectDate({selectedDate ,Back}) {
     const [selectDate, setdate] = useState(new Date())
     
     const handleChange = (date) =>{
@@ -32,7 +32,7 @@ function SelectDate({selectedDate}) {
             </div>
         <div className="row mt-5">
             <div className="col-sm-2">
-                {/* <button type="button" className="btn btn-primary">Back</button> */}
+                <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                 <div className="progress">
