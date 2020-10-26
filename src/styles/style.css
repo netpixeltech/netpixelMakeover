@@ -149,6 +149,8 @@ body {
   }
   
  
+
+
   .contact .row{
     margin-top: 2rem;
     padding: 5rem;
@@ -160,6 +162,16 @@ body {
     margin: 1rem;
   }
   
+
+/* about page */
+.about-para{
+  font-size: 20px;
+  letter-spacing: 130%;
+  padding: 5px;
+}
+
+
+
   
   .footer{
     
