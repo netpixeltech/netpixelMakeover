@@ -40,7 +40,7 @@ function MyParallax() {
              
             <ParallaxImg imgtitle={"Bridal"} img={bridal} />
             <ParallaxImg imgtitle={"Cocktail"} img={cocktail} />
-            <ParallaxImg imgtitle={"Mehnadi"} img={mehndi} />
+            <ParallaxImg imgtitle={"Mehndi"} img={mehndi} />
             <ParallaxImg imgtitle={"Reception"} img={reception} />
            
            
