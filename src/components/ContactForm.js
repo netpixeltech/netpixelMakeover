@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import PartyPage from "./contact/PartyPage"
 import CommercialPage from './contact/CommercialPage'
 import Page1 from './contact/Page1'
-import Page2 from "./Contact/Page2"
+import Page2 from "./contact/Page2"
 import Ocassion from './contact/Ocassion'
 import Location from './contact/Location'
 import SelectDate from './contact/SelectDate'
