@@ -1,13 +1,31 @@
 import React,{useState} from 'react'
 
-function MultiOcassion({selectedMulti,Back}) {
+function MultiOcassion({selectedMulti,Back,currentData}) {
     const [msg,setmsg] = useState("")
-
+    
     const handleChange=(e)=> {
         setmsg(e.target.value)
     }
 
-    
+    const handleClick =(data)=>{
+        const {party,commercial} = currentData;
+        
+        if(party)
+        {
+            selectedMulti(data,9)
+        }
+        if(commercial){
+            selectedMulti(data,10)
+        }
+        
+        if(!party&&!commercial){
+            selectedMulti(data,3)
+        }
+        
+        
+        
+    }
+
     return (
         <div>
             <div className="row">
@@ -29,7 +47,7 @@ function MultiOcassion({selectedMulti,Back}) {
                 <div className="col-md-12">
                     <div >
                     <div id="continue" className="mb-3" aria-disabled="false">
-                        <button onClick={()=>selectedMulti(msg)} className="btn btn-primary">Continue</button>
+                        <button onClick={()=>handleClick({MultiOcassion:msg})} className="btn btn-primary">Continue</button>
                     </div>
                     {/* <hr className="hr" /> */}
                     </div>
@@ -38,7 +56,7 @@ function MultiOcassion({selectedMulti,Back}) {
 
         <div className="row mt-5">
             <div className="col-sm-2">
-                  <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+                  <button onClick={()=>Back(2)} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                   <div className="progress">

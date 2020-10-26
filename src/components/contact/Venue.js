@@ -2,10 +2,12 @@ import React,{useState} from 'react'
 
 function Venue({selectedVenue,Back}) {
     const [venue, setVenue] = useState("")
-
+   
     const handleChange = (e) =>{
         setVenue(e.target.value)
     }
+
+    
 
     return (
         <div>
@@ -28,16 +30,15 @@ function Venue({selectedVenue,Back}) {
             <div className="col-md-12">
                 <div >
                 <div id="continue" className="mb-3" aria-disabled="false">
-                    <button onClick={()=>selectedVenue(venue)} className="btn btn-primary">Continue</button>
+                    <button onClick={()=>selectedVenue({venue},4)} className="btn btn-primary">Continue</button>
                 </div>
-                {/* <hr className="hr" /> */}
                 </div>
             </div>
         </div>
 
     <div className="row mt-5">
         <div className="col-sm-2">
-              <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+              <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
         </div>
         <div className="col-sm-10">
               <div className="progress">

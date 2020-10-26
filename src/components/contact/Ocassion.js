@@ -1,8 +1,32 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-function Ocassion({handleOcassion,Back}) {
+function Ocassion({handleOcassion,Back,currentData}) {
 
 
+const handleClick =(data)=>{
+    console.log("ocassion data=>",data);
+    console.log("current data=>",currentData);
+    const {party,commercial} = currentData;
+    if(data.Ocassion==="multiple time"){
+        handleOcassion(data,6)
+    }
+    else{
+    
+        if(party)
+    {
+        handleOcassion(data,9)
+    }
+    if(commercial){
+        handleOcassion(data,10)
+    }
+    
+        if(!party&&!commercial){
+            handleOcassion(data,3)
+        }
+    
+    }
+    
+}
 
     return (
         <div>
@@ -17,14 +41,14 @@ function Ocassion({handleOcassion,Back}) {
                 <div className="col-sm-6">
                     <div className="card" style={{width: "18rem",margin:"auto"}}>
                         <div className="card-body">
-                            <button className="btn btn-info" onClick={()=>handleOcassion("one")}>One Time</button>
+                            <button className="btn btn-info" onClick={()=>handleClick({Ocassion:"one time"})}>One Time</button>
                         </div>
                     </div>
                 </div>
                 <div className="col-sm-6">
                 <div className="card" style={{width: "18rem",margin:"auto"}}>
                         <div className="card-body">
-                            <button className="btn btn-info" onClick={()=>handleOcassion("multi")} >Multiple Time</button>
+                            <button className="btn btn-info" onClick={()=>handleClick({Ocassion:"multiple time"})} >Multiple Time</button>
                         </div>
                     </div>
                 </div>
@@ -35,7 +59,7 @@ function Ocassion({handleOcassion,Back}) {
 
             <div className="row mt-5">
             <div className="col-sm-2">
-                  <button onClick={()=>Back()}  type="button" className="btn btn-primary">Back</button>
+                  <button onClick={()=>Back(1)}  type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                   <div className="progress">

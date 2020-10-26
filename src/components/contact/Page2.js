@@ -6,12 +6,14 @@ import PhoneInput from 'react-phone-number-input'
 function Page2({SendMessage,Back}) {
 
   const [value, setValue] = useState()
+  
   const [inputs, setinputs] = useState({
     name:"",
     email:"",
     message:""
   })
 
+  
    
   const handleChange = (e)=>{ 
     console.log(e.target.id);
@@ -68,7 +70,7 @@ function Page2({SendMessage,Back}) {
                   id="message" rows="3"></textarea>
                </div>
  
-               <button  onClick={()=>SendMessage(inputs,value)} className="btn btn-primary">Send</button>
+               <button  onClick={()=>SendMessage({...inputs,value},1)} className="btn btn-primary">Send</button>
              {/* </form> */}
              </div>
          </div>
@@ -76,7 +78,7 @@ function Page2({SendMessage,Back}) {
 
         <div className="row mt-5">
             <div className="col-sm-2">
-                <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+                <button onClick={()=>Back(4)} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                 <div className="progress">

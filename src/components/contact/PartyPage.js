@@ -6,16 +6,18 @@ function BridalPage({selectedParty,Back}) {
         partyPersons:0,
         aboutPersons:""
     })
-
+    
     const handleChange =(e)=>{
         setmsg({
             [e.target.id]:e.target.value
         })
     }
 
+   
+
     const handleSubmit =(e) => {
         e.preventDefault()
-        selectedParty(msg)
+        selectedParty(msg,3)
     }
 
     return (
@@ -32,7 +34,7 @@ function BridalPage({selectedParty,Back}) {
                 <div className="col-sm">
                 <div className="form-group">
                     <label >How many people need party make up?</label>
-                    <input value={msg.partyPersons} onChange={handleChange} className="form-control" id="partyPersons" required="true"/>
+                    <input value={msg.partyPersons} onChange={handleChange} className="form-control" id="partyPersons" required={true}/>
                 </div>
                 </div>
             </div>
@@ -41,7 +43,7 @@ function BridalPage({selectedParty,Back}) {
                 <div className="col-sm">
                 <div className="form-group">
                     <label >Describe the people who need make up</label>
-                    <textarea value={msg.aboutPersons} onChange={handleChange} className="form-control" id="aboutPersons" rows="3" required="true"></textarea>
+                    <textarea value={msg.aboutPersons} onChange={handleChange} className="form-control" id="aboutPersons" rows="3" required={true}></textarea>
                 </div>
                 </div>
             </div>
@@ -62,7 +64,7 @@ function BridalPage({selectedParty,Back}) {
            
         <div className="row mt-5">
             <div className="col-sm-2">
-                  <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+                  <button onClick={()=>Back(1)} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                   <div className="progress">

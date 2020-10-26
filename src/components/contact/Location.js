@@ -1,5 +1,4 @@
 import React from 'react'
-import { Background } from 'react-parallax'
 
 function Location({handleVenue,Back}) {
     return (
@@ -15,21 +14,21 @@ function Location({handleVenue,Back}) {
             <div className="col-sm">
                 <div className="card" style={{width:"18rem",margin:"auto"}}>
                     <div className="card-body">
-                        <button onClick={()=>handleVenue("studio")} className="btn btn-info">Make up at Studio</button>
+                        <button onClick={()=>handleVenue({locationtype:"studio"},4)} className="btn btn-info">Make up at Studio</button>
                     </div>
                 </div>
             </div>
             <div className="col-sm">
             <div className="card" style={{width:"18rem",margin:"auto"}}>
                     <div className="card-body">
-                        <button onClick={()=>handleVenue("venue")} className="btn btn-info">Make up at venue</button>
+                        <button onClick={()=>handleVenue({locationtype:"venue"},7)} className="btn btn-info">Make up at venue</button>
                     </div>
                 </div>
             </div>
             <div className="col-sm">
             <div className="card" style={{width:"18rem",margin:"auto"}}>
                     <div className="card-body">
-                        <button onClick={()=>handleVenue("outside")} className="btn btn-info" >Make up outside Ludhiana</button>
+                        <button onClick={()=>handleVenue({locationtype:"outside"},7)} className="btn btn-info" >Make up outside Ludhiana</button>
                     </div>
                 </div>
             </div>
@@ -39,7 +38,7 @@ function Location({handleVenue,Back}) {
        
         <div className="row mt-5">
         <div className="col-sm-2">
-              <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+              <button onClick={()=>Back(2)} type="button" className="btn btn-primary">Back</button>
         </div>
         <div className="col-sm-10">
               <div className="progress">

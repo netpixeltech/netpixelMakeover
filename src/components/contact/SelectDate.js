@@ -8,7 +8,7 @@ function SelectDate({selectedDate ,Back}) {
     const handleChange = (date) =>{
         // console.log(date);
         setdate(date)
-        selectedDate(date)
+        selectedDate({date},5)
     }
     
     return (
@@ -32,7 +32,7 @@ function SelectDate({selectedDate ,Back}) {
             </div>
         <div className="row mt-5">
             <div className="col-sm-2">
-                <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+                <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                 <div className="progress">

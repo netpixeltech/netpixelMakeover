@@ -106,7 +106,12 @@ body {
     font-size: 4rem;
   }
   
-  /* contact form card section */
+/* contact form card section */
+.card-body{
+  background: #999999;
+}
+
+
 
 .mystyle::after{
     position: absolute;

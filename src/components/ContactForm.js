@@ -1,7 +1,5 @@
 import React,{useState} from 'react'
-import BridalPage from './contact/BridalPage'
 import PartyPage from "./contact/PartyPage"
-
 import CommercialPage from './contact/CommercialPage'
 import Page1 from './contact/Page1'
 import Page2 from "./Contact/Page2"
@@ -13,198 +11,82 @@ import MultiOcassion from './contact/MultiOcassion'
 import Venue from './contact/Venue'
 import emailjs from 'emailjs-com';
 function ContactForm() {
+    const [formdata, setformData] = useState({})
+    const [view, setview] = useState(1)
 
-    // const [optionSelected, setoptionSelected] = useState({
-    //     start:true
-    // })
+    // const options =(data,next)=>{
+    //     setformData({...formdata,...data}); 
+    // }
 
-    const [data, setData] = useState({start:true})
-    const [prevData,setPrevData] = useState({})
-   
-    const options=(selected)=>{
-        // setoptionSelected({...selected})
-        setPrevData({
-            ...data
-        })
-        setData({...selected})
-       
+    const handleSubmit = (data,next)=>{
+        setformData({...formdata,...data});
+        setview(next)
     }
 
-    const selectedParty =(partyData)=>{
-        console.log(partyData);
-        setPrevData({
-            ...data
-        })
-        setData({
-            // ...optionSelected,
-            ...data,
-            ...partyData
-        })
-    }
-    const selectedCom =(comData)=>{
-        console.log(comData);
-        setPrevData({
-            ...data
-        })
-        setData({
-            // ...optionSelected,
-            ...data,
-            comData
-        })
+    const Back = (back) =>{
+        setview(back)
     }
 
-    const Back = () =>{
-        setData({
-            ...prevData
-        })
-    }
-
-    const handleOcassion = (str)=>{
-        
-        setPrevData({
-            ...data
-        })
-        setData({
-            // ...optionSelected,
-            ...data,
-            ocassion:str
-        })
-        console.log(str);
-        
-    }
-    const selectedMulti=(multiOcassionData)=>{
-        console.log(multiOcassionData);
-        setPrevData({
-            ...data
-        })
-        setData({
-            ...data,
-            multiOcassionData
-        })
-    }
-
-    const handleLocation = (locationtype)=>{
-        setPrevData({
-            ...data
-        })
-        setData({
-            ...data,
-            locationtype
-        })
-    }
-
-    const selectedVenue = (venueAddress)=>{
-        setPrevData({
-            ...data
-        })
-        setData({
-            ...data,
-            venueAddress
-        })
-    }
-    const selectedDate =(dateSelected)=>{
-        setPrevData({
-            ...data
-        })
-        setData({
-            ...data,
-            dateSelected
-        })
-    }
-
-    const selectedTime = (timeSelected)=>{
-        setData({
-            ...data,
-            timeSelected
-        })
-    }
-
-    const SendMessage = (myinputs,phone)=>{
-        setData({...data , ...myinputs,phone})
-        const templateParams = {
-            message_html: data.locationtype,
-        };
-        console.log(templateParams);
-    //     emailjs.send('service_i5gpog3','template_vvk74yx', templateParams,'user_14Fwr6tMEh2ZbllFx6k6G')
-    // .then((response) => {
-    //    console.log('SUCCESS!', response.status, response.text);
-    // }, (err) => {
-    //    console.log('FAILED...', err);
-    // });
-    console.log(myinputs);
-    window.location.reload();
-        
-    }
-    
+  
     const display=()=>{
-        console.log(data)
-
-        if (data.timeSelected) {
-            return <Page2 Back={Back} SendMessage={SendMessage} />
-        }
-        if (data.dateSelected) {
-           return  <Time Back={Back} selectedTime={selectedTime} />
+        console.log("formdata=>",formdata);
+        console.log("viewNo=>",view);
+        if (view===1) {
+            return <Page1 select={handleSubmit} currentData={formdata} />
         }
 
-        if(data.locationtype==="studio" || data.venueAddress ){
-            return <SelectDate Back={Back} selectedDate={selectedDate} />
-        }
-        if(data.locationtype==="venue"|| data.locationtype==="outside"){
-            return <Venue Back={Back} selectedVenue={selectedVenue} />
+        if(view===2){
+            return <Ocassion currentData={formdata} Back={Back} handleOcassion={handleSubmit} />
         }
 
-        if (data.ocassion==="one" || data.multiOcassionData || data.aboutPersons || data.comData) {
-            return <Location Back={Back} handleVenue={handleLocation}/>
+        if (view===3) {
+            return <Location Back={Back} handleVenue={handleSubmit}/>
         }
 
-        if(data.ocassion==="multi"){
-            return <MultiOcassion Back={Back} selectedMulti={selectedMulti}/>;
+        if(view===4){
+            return <SelectDate Back={Back} selectedDate={handleSubmit} />
         }
 
-        if (data.commercial) {
-            return <CommercialPage Back={Back} selectedCom={selectedCom} />
-        }
-        if(data.party){
-            return  <PartyPage Back={Back} selectedParty={selectedParty} />
+        if (view===5) {
+            return  <Time Back={Back} selectedTime={handleSubmit} />
+         }
+
+        if(view===6){
+            return <MultiOcassion currentData={formdata} Back={Back} selectedMulti={handleSubmit}/>;
         }
 
-        if(data.bridal){
-            return <Ocassion Back={Back} handleOcassion={handleOcassion} />
+        if(view===7){
+            return <Venue Back={Back} selectedVenue={handleSubmit} />
+        }
+
+        if(view===9){
+            return  <PartyPage Back={Back} selectedParty={handleSubmit} />
+        }
+
+        if (view===10) {
+            return <CommercialPage Back={Back} selectedCom={handleSubmit} />
+        }
+
+        if (view === 11) {
+            return <Page2 Back={Back} SendMessage={handleSubmit} />
         }
        
-
-        if (!data.start) {
-            return <Page2 />
-        }
-        if(data){
-            return <Page1 select={options} display="block"/>
-        }
-
-        else{
-            
-            return(
-            <div>
-                <Page1 select={options} display="none" />
-                <BridalPage display="none"/>
-                <PartyPage display="none" />
-                
-            </div>)
-        }
     }
+
+
+
 
     return (
-<div>     
-    <div className="card mx-auto text-center contact-form-card">
-      <div className="card-body">
-        <h5 className="card-title mb-3">Picberry Design</h5>
-        <h6 className="card-subtitle mb-4 text-muted">Make a Booking Request</h6>
-        {display()}
-        {
-            // console.log(optionSelected)
-        }
+    <div>     
+        <div className="card mx-auto text-center contact-form-card">
+        <div className="card-body">
+            <h5 className="card-title mb-3">Picberry Design</h5>
+            <h6 className="card-subtitle mb-4 text-muted">Make a Booking Request</h6>
+            {display()}
+            </div>
+            </div>
         </div>
-        </div>
-    </div>)
+    )
 }
 
 export default ContactForm

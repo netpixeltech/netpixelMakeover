@@ -3,11 +3,12 @@ import React,{useState} from 'react'
 function BridalPage({Back,selectedCom}) {
 
     const [msg,setmsg] = useState("")
-
+    
     const handleChange=(e)=> {
         setmsg(e.target.value)
     }
 
+    
 
     return (
         <div>
@@ -31,7 +32,7 @@ Commercial / Photoshoot?</h4>
             <div className="col-md-12">
                 <div >
                 <div id="continue" className="mb-3" aria-disabled="false">
-                    <button onClick={()=>selectedCom(msg)} className="btn btn-primary">Continue</button>
+                    <button onClick={()=>selectedCom(msg,3)} className="btn btn-primary">Continue</button>
                 </div>
                 {/* <hr className="hr" /> */}
                 </div>
@@ -40,7 +41,7 @@ Commercial / Photoshoot?</h4>
 
     <div className="row mt-5">
         <div className="col-sm-2">
-              <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+              <button onClick={()=>Back(1)} type="button" className="btn btn-primary">Back</button>
         </div>
         <div className="col-sm-10">
               <div className="progress">

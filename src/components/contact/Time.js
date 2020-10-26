@@ -6,51 +6,51 @@ function Time({selectedTime,Back}) {
         <div id="time">
             <div className="row" >
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(8)} className="btn btn-danger">08:00</button>
+                    <button onClick={()=>selectedTime({time:8},11)} className="btn btn-danger">08:00</button>
                 </div>
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(9)} className="btn btn-danger">09:00</button>
+                    <button onClick={()=>selectedTime({time:9},11)} className="btn btn-danger">09:00</button>
                 </div>
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(10)} className="btn btn-danger">10:00</button>
-                </div>
-            </div>
-            <div className="row" >
-                <div className="col-sm">
-                    <button onClick={()=>selectedTime(11)} className="btn btn-danger">11:00</button>
-                </div>
-                <div className="col-sm">
-                    <button onClick={()=>selectedTime(12)} className="btn btn-danger">12:00</button>
-                </div>
-                <div className="col-sm">
-                    <button onClick={()=>selectedTime(13)} className="btn btn-danger">13:00</button>
+                    <button onClick={()=>selectedTime({time:10},11)} className="btn btn-danger">10:00</button>
                 </div>
             </div>
             <div className="row" >
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(14)} className="btn btn-danger">14:00</button>
+                    <button onClick={()=>selectedTime({time:11},11)} className="btn btn-danger">11:00</button>
                 </div>
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(15)} className="btn btn-danger">15:00</button>
+                    <button onClick={()=>selectedTime({time:12},11)} className="btn btn-danger">12:00</button>
                 </div>
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(16)} className="btn btn-danger">16:00</button>
+                    <button onClick={()=>selectedTime({time:13},11)} className="btn btn-danger">13:00</button>
                 </div>
             </div>
             <div className="row" >
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(17)} className="btn btn-danger">17:00</button>
+                    <button onClick={()=>selectedTime({time:14},11)} className="btn btn-danger">14:00</button>
                 </div>
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(18)} className="btn btn-danger">18:00</button>
+                    <button onClick={()=>selectedTime({time:15},11)} className="btn btn-danger">15:00</button>
                 </div>
                 <div className="col-sm">
-                    <button onClick={()=>selectedTime(19)} className="btn btn-danger">19:00</button>
+                    <button onClick={()=>selectedTime({time:16},11)} className="btn btn-danger">16:00</button>
+                </div>
+            </div>
+            <div className="row" >
+                <div className="col-sm">
+                    <button onClick={()=>selectedTime({time:17},11)} className="btn btn-danger">17:00</button>
+                </div>
+                <div className="col-sm">
+                    <button onClick={()=>selectedTime({time:18},11)} className="btn btn-danger">18:00</button>
+                </div>
+                <div className="col-sm">
+                    <button onClick={()=>selectedTime({time:19},11)} className="btn btn-danger">19:00</button>
                 </div>
             </div>
             <div className="row" >
                 <div className="col-sm-4">
-                    <button onClick={()=>selectedTime(20)} className="btn btn-danger">20:00</button>
+                    <button onClick={()=>selectedTime({time:20},11)} className="btn btn-danger">20:00</button>
                 </div>
                 
             </div>
@@ -58,7 +58,7 @@ function Time({selectedTime,Back}) {
             
             <div className="row mt-5">
             <div className="col-sm-2">
-                <button onClick={()=>Back()} type="button" className="btn btn-primary">Back</button>
+                <button onClick={()=>Back(4)} type="button" className="btn btn-primary">Back</button>
             </div>
             <div className="col-sm-10">
                 <div className="progress">
