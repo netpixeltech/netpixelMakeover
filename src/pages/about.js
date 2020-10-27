@@ -3,12 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/style.css"
 import Layout from '../components/Layout'
 
-import Head from '../components/head'
 function About() {
     
     return (
         <Layout >
-            <Head />
                 <div className="text-center mt-3 mb-5">
                     <h2> About </h2>
                 </div>

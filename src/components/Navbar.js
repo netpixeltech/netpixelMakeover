@@ -40,7 +40,7 @@ function Navbar() {
             <Link className="nav-link" to="/about">About</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to="/">Work</Link>
+            <Link className="nav-link" to="/portfolio">Work</Link>
         </li>
         <li className="nav-item">
             <Link className="nav-link" to="/services">Services</Link>
@@ -49,13 +49,13 @@ function Navbar() {
             <Link className="nav-link" to="/courses">Academy</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to="/">Blog</Link>
+            <Link className="nav-link" to="/blog">Blog</Link>
         </li>
         <li className="nav-item">
             <Link className="nav-link" to="/contact">contact us</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to="/">Book Now</Link>
+            <Link className="nav-link" to="/booknow">Book Now</Link>
         </li>
         </ul>
         
