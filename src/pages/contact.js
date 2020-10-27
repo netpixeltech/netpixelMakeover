@@ -14,24 +14,25 @@ function contact() {
                 </div>
                 {/* <div className="col-md-6"> */}
                 <form className="col-md-4">
-                    <div class="form-group">
+                    <div className="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="name" />
+                        <input type="text" className="form-control" id="name" placeholder="name" />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label >Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+                        <input type="email" className="form-control" id="email" placeholder="name@example.com" />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label >Phone No.</label>
-                        <input type="number" class="form-control" id="phone" placeholder="your phone no." />
+                        <input type="number" className="form-control" id="phone" placeholder="your phone no." />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label >Your Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="write your message"></textarea>
+                        <textarea className="form-control" id="message" rows="3" placeholder="write your message"></textarea>
                     </div>
-
-
+                   <div className="form-group">
+                        <button className="btn btn-primary">Send</button>
+                   </div>
                     </form>
                 {/* </div> */}
                 <div className="col-md-4">

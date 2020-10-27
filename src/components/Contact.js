@@ -20,7 +20,7 @@ function ContactUs() {
       <div className="col-lg-4">
         <i className="fas fa-envelope"></i>
         <h4 className="mt-3">Drop a Mail</h4>
-        <p typeof="email" className="mt-3">revekamakeovers@gmail.com</p>
+        <p typeof="email" className="mt-3"><a href="mailto : revekamakeovers@gmail.com">revekamakeovers@gmail.com</a></p>
       </div>
   
     </div>

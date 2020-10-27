@@ -13,21 +13,20 @@ function services() {
                 <div className="col-md-3">
                 </div>
                 <div className="col-md-6">
-                    <p>
+                    <p className="lead mb-4"> 
                         Reveka   is   one   of   the   most   aspiring   and   skilled   make-up   artists   and   is   available   for
                         fashion,editorial, bridal and party booking worldwide. Her visual sense, creativity and attention to detailwill make you love your look and feel confident. 
                     </p>
 
-                    <table>
-                        <thead>
-                            <th>
+                    <table className="table mb-3">
+                        <thead className="thead-dark">
                                 <tr>
-                                    <td>Location</td>
-                                    <td>Bridal</td>
-                                    <td>Party</td>
-                                    <td>Engagement</td>
+                                    <th scope="col" >Location</th>
+                                    <th scope="col" >Bridal</th>
+                                    <th scope="col" >Party</th>
+                                    <th scope="col" >Engagement</th>
                                 </tr>
-                            </th>
+                            
                         </thead>
                         <tbody>
                             <tr>
