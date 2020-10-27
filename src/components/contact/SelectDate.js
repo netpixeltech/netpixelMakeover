@@ -21,25 +21,26 @@ function SelectDate({selectedDate ,Back}) {
             </div>
 
             <div className="row mt-2">
-            {
-                console.log(selectDate)
-            }
-            <Calendar
-            minDate={new Date()}
-            onChange={handleChange}
-            value={selectDate}
-            />
+                <div className="col-md-12">
+                <Calendar
+                    minDate={new Date()}
+                    onChange={handleChange}
+                    value={selectDate}
+                    />
+                </div>
             </div>
         <div className="row mt-5">
+        <div className="col-sm-2"></div>
             <div className="col-sm-2">
                 <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
             </div>
-            <div className="col-sm-10">
+            <div className="col-sm-5">
                 <div className="progress">
                     <div className="progress-bar" role="progressbar" aria-valuenow="70" style={{width: "70%"}} aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <p>progress 70%</p>
             </div>
+            <div className="col-sm-3"></div>
         </div>
         </div>
     )

@@ -120,8 +120,8 @@ body {
     height: 45px;
     width: 45px;
     content: "✓";
-    top: -15px;
-    right: 46px;
+    top: -20px;
+    right: 5px;
     font-size: 30px;
     color: white;
     background: rgb(253, 182, 182);

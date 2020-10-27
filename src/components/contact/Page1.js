@@ -65,27 +65,31 @@ function Page1({select,display,currentData}) {
         </div>
 
         <div id="" className="row mb-3">
-                <div className={"col-md-4 " + (optionSelected.bridal?"mystyle":"")}>
+                <div className="col-md-3">
+                </div>
+
+                <div className={"col-md-2 mb-3 mt-2 " + (optionSelected.bridal?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(1)} className="service-option-1"  > 
-                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" />
+                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid" />
                    <h2>Bridal</h2>
                     </button>
                 </div>
-                <div className={"col-md-4 " + (optionSelected.party?"mystyle":"")}>
+
+                <div className={"col-md-2 mt-2 mb-3 " + (optionSelected.party?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(2)} className="service-option-1" > 
-                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" />
+                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid"/>
                     <h2> Party</h2>
                     </button>
                 </div>
                
-                
-                <div className={"col-md-4 " + (optionSelected.commercial?"mystyle":"")}>
+                <div className={"col-md-2 mt-2 mb-3 " + (optionSelected.commercial?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(3)} className="service-option-1" > 
-                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" />
+                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid"/>
                     <h2>Commercial</h2>
                     </button>
                 </div>
-             
+                <div className="col-md-3">
+                </div>
 
           </div>
 
@@ -101,11 +105,15 @@ function Page1({select,display,currentData}) {
             </div>
         </div>
         <div className="row">
-            <div className="col-sm-12">
+            <div className="col-md-3">
+            </div>
+            <div className="col-sm-6">
                   <div className="progress">
                     <div className="progress-bar" role="progressbar" aria-valuenow="10" style={{width: "10%"}} aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <p>progress 10%</p>
+            </div>
+            <div className="col-md-3">
             </div>
         </div>
            
