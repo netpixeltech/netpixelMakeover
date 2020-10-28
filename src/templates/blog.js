@@ -16,6 +16,8 @@ query(
     slug{
       current
     }
+    
+
     mainImage{
         asset{
          url
@@ -25,6 +27,18 @@ query(
   }
 `
 function Blog(props) {
+
+
+  const serializers = {
+    types: {
+      code: props => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      )
+    }
+  }
+
     return (
         <Layout >
             {
@@ -38,6 +52,7 @@ function Blog(props) {
            <p className="lead">
                {props.data.sanityPost.slug.current}
            </p>
+          
         </Layout>
     )
 }

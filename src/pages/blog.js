@@ -48,6 +48,9 @@ function Blog() {
                                 <Link to={`/blog/${postdata.node.title}`}><h2 className="card-title" style={{color:"black"}}>{postdata.node.title}</h2></Link>
                                 <p>{postdata.node.slug.current}</p>
                                 <p>{Date(postdata.node.publishedAt)}</p>
+                                {/* {
+                                    post
+                                } */}
                             </div>    
                         </div>
                         <div className="col-md-2">
