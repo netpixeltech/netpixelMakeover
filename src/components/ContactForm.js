@@ -79,7 +79,7 @@ function ContactForm() {
     return (
     <div>     
         <div className="card mx-auto text-center contact-form-card">
-        <div className="card-body">
+        <div className="card-body ">
             <h5 className="card-title mb-3">Picberry Design</h5>
             <h6 className="card-subtitle mb-4 text-muted">Make a Booking Request</h6>
            

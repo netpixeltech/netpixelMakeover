@@ -85,9 +85,10 @@ function Page1({select,display,currentData}) {
                 <div className={"col-md-2 mt-2 mb-3 " + (optionSelected.commercial?"mystyle":"")}>
                     <button onClick={()=>handleOptionClick(3)} className="service-option-1" > 
                     <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid"/>
-                    <h2>Commercial</h2>
+                    <h2> Commercial</h2>
                     </button>
                 </div>
+               
                 <div className="col-md-3">
                 </div>
 

@@ -18,12 +18,14 @@ function Venue({selectedVenue,Back}) {
             </div>
         </div>
         <div className="row">
-            <div className="col-sm">
+        <div className="col-sm-4"></div>
+            <div className="col-sm-4">
             <div className="form-group">
                 <label >Full Address of the make-up?</label>
                 <textarea value={venue} onChange={handleChange} className="form-control" id="multipleLocation" rows="3"></textarea>
             </div>
             </div>
+            <div className="col-sm-4"></div>
         </div>
 
         <div className="row mt-2">
@@ -37,15 +39,17 @@ function Venue({selectedVenue,Back}) {
         </div>
 
     <div className="row mt-5">
+    <div className="col-sm-3"></div>
         <div className="col-sm-2">
               <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
         </div>
-        <div className="col-sm-10">
+        <div className="col-sm-3">
               <div className="progress">
                 <div className="progress-bar" role="progressbar" aria-valuenow="60" style={{width: "60%"}} aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <p>progress 60%</p>
         </div>
+        <div className="col-sm-4"></div>
     </div>
     </div>
 

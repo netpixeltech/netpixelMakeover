@@ -57,15 +57,17 @@ function Time({selectedTime,Back}) {
             </div>
             
             <div className="row mt-5">
+            <div className="col-sm-3"></div>
             <div className="col-sm-2">
                 <button onClick={()=>Back(4)} type="button" className="btn btn-primary">Back</button>
             </div>
-            <div className="col-sm-10">
+            <div className="col-sm-3">
                 <div className="progress">
                     <div className="progress-bar" role="progressbar" aria-valuenow="80" style={{width: "80%"}} aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <p>progress 80%</p>
             </div>
+            <div className="col-sm-4"></div>
         </div>
         
         </div>
