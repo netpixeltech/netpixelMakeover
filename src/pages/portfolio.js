@@ -1,24 +1,27 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql,useStaticQuery } from "gatsby";
 
+// import { graphql,useStaticQuery } from "gatsby";
+
+import Gallery from "react-responsive-gallery";
+import BridalImage from "../images/bridal/bridalImage"
 function Portfolio() {
 
-    const data = useStaticQuery(graphql`
-    query{
-        allSanityPost{
-            edges{
-           node{
-             mainImage{
-                 asset{
-                     url
-                 }
-             }
-           }
-         } 
-       }
-       } 
-    `)
+    // const data = useStaticQuery(graphql`
+    // query{
+    //     allSanityPost{
+    //         edges{
+    //        node{
+    //          mainImage{
+    //              asset{
+    //                  url
+    //              }
+    //          }
+    //        }
+    //      } 
+    //    }
+    //    } 
+    // `)
 
 
     return (
@@ -30,7 +33,9 @@ function Portfolio() {
                 </div>
             </div>
 
-            <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-evenly"}}>
+            <Gallery images={BridalImage} useLightBox={true}/>
+            
+            {/* <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-evenly"}}>
             {
                 data.allSanityPost.edges.map((edge,index)=>{
                     return(
@@ -47,7 +52,7 @@ function Portfolio() {
                 })
             }
             </div>
-              
+               */}
 
             </Layout>
 

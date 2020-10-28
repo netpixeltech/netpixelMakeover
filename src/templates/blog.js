@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout'
 import {graphql} from 'gatsby'
 import BasePortableText from '@sanity/block-content-to-react'
+
+
 export const query = graphql`
 query(
     $title:String!
@@ -12,6 +14,16 @@ query(
     }
   ){
       title
+      authors{
+        author{
+          name
+          image{
+            asset{
+              url
+            }
+          }
+        }
+      }
       mainImage{
         asset{
           url
@@ -37,7 +49,7 @@ function Blog(props) {
           <code>{props.node.code}</code>
         </pre>
       ),
-      mainImage: "Figure",
+      mainImage: "Blogdetail",
       authorReference: ({node}) => <span>{node.author.name}</span>
     }
   }
@@ -54,10 +66,18 @@ function Blog(props) {
            <div style={{maxWidth:"100%"}}>
            <img src={props.data.sanityPost.mainImage.asset.url} alt="blog" className="img-fluid" />
            </div>
-           <p className="lead">
-               {props.data.sanityPost.slug.current}
-           </p>
-           <BasePortableText blocks={props.data.sanityPost._rawBody} serializers={serializers} />
+          
+          <div className="row mt-5 mb-3">
+            <div className="col-sm-2"></div>
+            <div className="col-sm-6">
+              <BasePortableText blocks={props.data.sanityPost._rawBody} serializers={serializers} />
+            </div>
+            <div className="col-sm-2 ">
+                <h4>Author</h4>
+                <img src={props.data.sanityPost.authors[0].author.image.asset.url} alt="author" style={{height:"40px"}}></img>
+                <p>{props.data.sanityPost.authors[0].author.name}</p>
+            </div>
+          </div>
         </Layout>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function blogdetail(props) {
+function Blogdetail(props) {
     return (
         <div>
            <h1>{props.children}</h1> 
@@ -8,4 +8,4 @@ function blogdetail(props) {
     )
 }
 
-export default blogdetail
+export default Blogdetail
