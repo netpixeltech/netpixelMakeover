@@ -33,7 +33,7 @@ function Portfolio() {
                 </div>
             </div>
 
-            <Gallery images={BridalImage} useLightBox={true}/>
+            <Gallery images={BridalImage()} useLightBox={true}/>
             
             {/* <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-evenly"}}>
             {
