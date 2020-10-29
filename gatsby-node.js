@@ -36,7 +36,7 @@ module.exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         module: {
           rules: [
             {
-              test: /bad-module/,
+              test: /react-responsive-gallery/,
               use: loaders.null(),
             },
           ],
