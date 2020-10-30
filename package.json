@@ -19,8 +19,11 @@
     "bootstrap": "^4.5.3",
     "emailjs-com": "^2.6.3",
     "gatsby": "^2.24.80",
+    "gatsby-image": "^2.4.21",
     "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-sharp": "^2.6.43",
     "gatsby-source-sanity": "^6.0.4",
+    "gatsby-transformer-sharp": "^2.5.20",
     "jquery": "^1.11.0",
     "react": "^16.12.0",
     "react-calendar": "^3.1.0",
@@ -28,9 +31,8 @@
     "react-helmet": "^6.1.0",
     "react-parallax": "^3.0.3",
     "react-phone-number-input": "^3.1.0",
-    "react-photo-gallery": "^8.0.0",
-    "react-responsive-gallery": "^1.2.5",
-    "simple-parallax-js": "^5.6.2"
+    "simple-parallax-js": "^5.6.2",
+    "simple-react-lightbox": "^3.3.4-1"
   },
   "devDependencies": {
     "prettier": "2.1.2"

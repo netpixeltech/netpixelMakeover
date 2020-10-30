@@ -6,7 +6,7 @@ import React from 'react'
 // import img5 from "../bridal/img5.jpg"
 // import img6 from "../bridal/img6.jpg"
 // import img7 from "../bridal/img7.jpg"
-
+import { SRLWrapper } from "simple-react-lightbox";
 import { graphql,useStaticQuery,Link } from "gatsby";
 
 
@@ -32,17 +32,19 @@ edges{
    
 `)
 
-const  bridalImage =[]
+// const  bridalImage =[]
 
 
-data.allSanityGallery.edges.map(edge=>{
-bridalImage.push({
-    src:edge.node.image.asset.url
-})
-})
+
 
     return (
-       bridalImage
+      <SRLWrapper>
+       {
+        data.allSanityGallery.edges.map(edge=>{
+          return <img src={edge.node.image.asset.url} className="img-fluid my-2" alt="bridal" style={{width:"32%",height:"15rem",order:1}} />
+        })
+       }
+      </SRLWrapper>
     )
 }
 
