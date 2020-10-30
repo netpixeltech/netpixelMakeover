@@ -11,14 +11,8 @@ function About() {
                     <h2> About </h2>
                 </div>
                 <div className="row">
-<<<<<<< HEAD
                    
                     <div className="col-md-8">
-=======
-                    <div className="col-md-2">
-                    </div>
-                    <div className="col-md-4">
->>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
                         <p className="lead" >
                             Makeup artist Reveka, who is also the founder of ‘Reveka Makeovers & Studio’, is a woman on a mission as beautiful as it is powerful; an artist by heart who is turning the dreams into reality,an  entrepreneur 
                             exploring  the  potential   of makeup.   An  eye  for the  makeup   and her  immense hard-work has made her journey flawless and has become an inspiration to many girls. 
@@ -35,12 +29,7 @@ function About() {
                     <div className="col-md-4">
                         <img src="" alt="reveka"></img>
                     </div>
-<<<<<<< HEAD
                    
-=======
-                    <div className="col-md-2">
-                    </div>
->>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
                 </div>
            </Layout>
     )

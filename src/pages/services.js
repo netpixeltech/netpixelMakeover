@@ -10,14 +10,8 @@ function services() {
                 <h2>Let's create your dream look! </h2>
             </div>
             <div className="row">
-<<<<<<< HEAD
              
                 <div className="col-md-12">
-=======
-                <div className="col-md-3">
-                </div>
-                <div className="col-md-6">
->>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
                     <p className="lead mb-4"> 
                         Reveka   is   one   of   the   most   aspiring   and   skilled   make-up   artists   and   is   available   for
                         fashion,editorial, bridal and party booking worldwide. Her visual sense, creativity and attention to detailwill make you love your look and feel confident. 
@@ -49,11 +43,6 @@ function services() {
                         </tbody>
                     </table>
                 </div>
-<<<<<<< HEAD
-=======
-                <div className="col-md-3">
-                </div>
->>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
             </div>
 
        </Layout>

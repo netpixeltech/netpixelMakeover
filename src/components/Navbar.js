@@ -52,11 +52,7 @@ function Navbar() {
             <Link className="nav-link" to="/blog">Blog</Link>
         </li>
         <li className="nav-item">
-<<<<<<< HEAD
             <Link className="nav-link" to="/contact">Contact us</Link>
-=======
-            <Link className="nav-link" to="/contact">contact us</Link>
->>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
         </li>
         <li className="nav-item">
             <Link className="nav-link" to="/booknow">Book Now</Link>
