@@ -10,7 +10,14 @@ function contact() {
                 <h2>Get In Touch</h2>
             </div>
             <div className="row">
+<<<<<<< HEAD
                 <form className="col-md-6">
+=======
+                <div className="col-md-1">
+                </div>
+                {/* <div className="col-md-6"> */}
+                <form className="col-md-4">
+>>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
                     <div className="form-group">
                         <label>Name</label>
                         <input type="text" className="form-control" id="name" placeholder="name" />
@@ -32,7 +39,11 @@ function contact() {
                    </div>
                     </form>
                 {/* </div> */}
+<<<<<<< HEAD
                 <div className="col-md-6">
+=======
+                <div className="col-md-4">
+>>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
                     <p>Thank you so much for stopping by!</p>
                     <p>
                         If you are interested in booking a session or just have a general question/inquiry,

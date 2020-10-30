@@ -10,8 +10,14 @@ function courses() {
                 <h2>Courses</h2>
             </div>
             <div className="row">
+<<<<<<< HEAD
                
                 <div className="col-md-12">
+=======
+                <div className="col-md-3">
+                </div>
+                <div className="col-md-6">
+>>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
                     <p className="lead mb-3">
                     Learn the art of makeup with Reveka in a fun and friendly atmosphere. We take personalizedclasses to enhance the natural beauty using simple techniques that you will be able to recreate athome after the class.
                     The skill you will learn will help you look and feel absolutely fabulous andfull of self-confidence every single day! 
@@ -49,6 +55,11 @@ function courses() {
                         </tbody>
                     </table>
                 </div>
+<<<<<<< HEAD
+=======
+                <div className="col-md-3">
+                </div>
+>>>>>>> 5f3e8f9123a49bcf4c7b5702ade2c25d8381d85c
             </div>
         </Layout>
 
