@@ -19,8 +19,13 @@ function ContactForm() {
     // }
 
     const handleSubmit = (data,next)=>{
-        setformData({...formdata,...data});
+        if (data.refresh) {
+            setformData({})
+        }else{
+            setformData({...formdata,...data});
+        }
         setview(next)
+
     }
 
     const Back = (back) =>{
@@ -68,7 +73,7 @@ function ContactForm() {
         }
 
         if (view === 11) {
-            return <Page2 Back={Back} SendMessage={handleSubmit} />
+            return <Page2 Back={Back} SendMessage={handleSubmit} currentData={formdata} />
         }
        
     }
@@ -80,8 +85,8 @@ function ContactForm() {
     <div>     
         <div className="card mx-auto text-center contact-form-card">
         <div className="card-body ">
-            <h5 className="card-title mb-3">Picberry Design</h5>
-            <h6 className="card-subtitle mb-4 text-muted">Make a Booking Request</h6>
+            <h3 className="card-title mb-3">Make a booking request</h3>
+            <h6 className="card-subtitle mb-4 text-muted">Complete the booking request and we will connect to you</h6>
            
                     {display()}
                

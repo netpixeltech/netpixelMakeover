@@ -2,10 +2,15 @@ import React,{useState} from 'react'
 
 function BridalPage({Back,selectedCom}) {
 
-    const [msg,setmsg] = useState("")
+    const [msg,setCommercialMessage] = useState({
+        CommercialMessage:""
+    })
     
     const handleChange=(e)=> {
-        setmsg(e.target.value)
+       setCommercialMessage({
+           ...msg,
+           [e.target.id]:e.target.value
+       })
     }
 
     
@@ -24,7 +29,7 @@ Commercial / Photoshoot?</h4>
             <div className="col-sm-4">
             <div className="form-group">
                 <label >Details of your Commercial / Photoshoot</label>
-                <textarea value={msg} onChange={handleChange} className="form-control" id="multipleLocation" rows="3"></textarea>
+                <textarea value={msg.CommercialMessage} onChange={handleChange} className="form-control" id="CommercialMessage" rows="3"></textarea>
             </div>
             </div>
             <div className="col-sm-4"></div>

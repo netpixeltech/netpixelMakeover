@@ -1,10 +1,12 @@
 import React,{useState} from 'react'
 
 function MultiOcassion({selectedMulti,Back,currentData}) {
-    const [msg,setmsg] = useState("")
+    const [msg,setmsg] = useState({
+        multiOcassionData:""
+    })
     
     const handleChange=(e)=> {
-        setmsg(e.target.value)
+        setmsg({...msg,[e.target.id]:e.target.value})
     }
 
     const handleClick =(data)=>{
@@ -51,7 +53,7 @@ function MultiOcassion({selectedMulti,Back,currentData}) {
                 <div className="col-md-12">
                     <div >
                     <div id="continue" className="mb-3" aria-disabled="false">
-                        <button onClick={()=>handleClick({MultiOcassion:msg})} className="btn btn-primary">Continue</button>
+                        <button onClick={()=>handleClick(msg)} className="btn btn-primary">Continue</button>
                     </div>
                     {/* <hr className="hr" /> */}
                     </div>

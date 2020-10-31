@@ -3,12 +3,13 @@ import React,{useState} from 'react'
 function BridalPage({selectedParty,Back}) {
 
     const [msg, setmsg] = useState({
-        partyPersons:0,
-        aboutPersons:""
+        noOfPartyPeople:0,
+        aboutPartyPeople:""
     })
     
     const handleChange =(e)=>{
         setmsg({
+            ...msg,
             [e.target.id]:e.target.value
         })
     }
@@ -35,7 +36,7 @@ function BridalPage({selectedParty,Back}) {
                 <div className="col-sm">
                 <div className="form-group">
                     <label >How many people need party make up?</label>
-                    <input value={msg.partyPersons} onChange={handleChange} className="form-control" id="partyPersons" required={true}/>
+                    <input value={msg.noOfPartyPeople} onChange={handleChange} className="form-control" id="noOfPartyPeople" required={true}/>
                 </div>
                 </div>
                 <div className="col-sm-2"></div>
@@ -46,7 +47,7 @@ function BridalPage({selectedParty,Back}) {
                 <div className="col-sm">
                 <div className="form-group">
                     <label >Describe the people who need make up</label>
-                    <textarea value={msg.aboutPersons} onChange={handleChange} className="form-control" id="aboutPersons" rows="3" required={true}></textarea>
+                    <textarea value={msg.aboutPartyPeople} onChange={handleChange} className="form-control" id="aboutPartyPeople" rows="3" required={true}></textarea>
                 </div>
                 </div>
                 <div className="col-sm-2"></div>

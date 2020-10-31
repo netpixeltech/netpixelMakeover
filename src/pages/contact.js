@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import Head from "../components/head"
+import emailjs from 'emailjs-com';
 
-function contact() {
+function Contact() {
+
+    const [ data, setData] = useState({
+        name:"",
+        email:"",
+        phone:0,
+        message:""
+    })
+
+   const handleChange =(e)=>{
+       setData({...data,
+           [e.target.id]:e.target.value
+       })
+   }
+   const handleSubmit = (e)=>{
+    // e.preventDefault();
+
+       console.log(data);
+    //    emailjs.send('service_i5gpog3','template_2nz3d6g', data, 'user_14Fwr6tMEh2ZbllFx6k6G')
+    //    .then((response) => {
+    //       console.log('SUCCESS!', response.status, response.text);
+    //    }, (err) => {
+    //       console.log('FAILED...', err);
+    //    });
+      
+   }
+
+
     return (
         <Layout >
             <Head />
@@ -10,25 +38,25 @@ function contact() {
                 <h2>Get In Touch</h2>
             </div>
             <div className="row">
-                <form className="col-md-6">
+                <form className="col-md-6" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label>Name</label>
-                        <input type="text" className="form-control" id="name" placeholder="name" />
+                        <input onChange={handleChange} value={data.name} type="text" className="form-control" id="name" placeholder="name" required={true} />
                     </div>
                     <div className="form-group">
                         <label >Email</label>
-                        <input type="email" className="form-control" id="email" placeholder="name@example.com" />
+                        <input onChange={handleChange} value={data.email} type="email" className="form-control" id="email" placeholder="name@example.com" required={true}/>
                     </div>
                     <div className="form-group">
                         <label >Phone No.</label>
-                        <input type="number" className="form-control" id="phone" placeholder="your phone no." />
+                        <input onChange={handleChange} value={data.phone} type="number" className="form-control" id="phone" placeholder="your phone no." required={true} />
                     </div>
                     <div className="form-group">
                         <label >Your Message</label>
-                        <textarea className="form-control" id="message" rows="3" placeholder="write your message"></textarea>
+                        <textarea onChange={handleChange} value={data.message} className="form-control" id="message" rows="3" placeholder="write your message"></textarea>
                     </div>
                    <div className="form-group">
-                        <button className="btn btn-primary">Send</button>
+                        <button className="btn btn-primary" type="submit">Send</button>
                    </div>
                     </form>
                 {/* </div> */}
@@ -49,4 +77,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact
