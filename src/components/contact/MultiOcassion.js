@@ -31,7 +31,7 @@ function MultiOcassion({selectedMulti,Back,currentData}) {
     return (
         <div>
 
-            <div className="row">
+            <div className="row text-center">
                 
                 <div className="col-sm">
                     <h4>Dates and times for your multiple occasions</h4>

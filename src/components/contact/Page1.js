@@ -55,11 +55,11 @@ function Page1({select,display,currentData}) {
 
     return (
 
-        <div style={{display}} >
+        <div style={{display}} id="page1" >
            
         <div className="row">
-            <div className="col-sm-12">
-                <h5 className="text-center">Select the Services in which are you interested? </h5>
+            <div className="col-sm-12 text-center">
+                <h4 className="">Select the Services in which are you interested? </h4>
                 <p>select which suits you best?</p>
             </div>
         </div>
@@ -69,23 +69,29 @@ function Page1({select,display,currentData}) {
                 </div>
 
                 <div className={"col-md-2 mb-3 mt-2 " + (optionSelected.bridal?"mystyle":"")}>
-                    <button onClick={()=>handleOptionClick(1)} className="service-option-1"  > 
-                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid" />
-                   <h2>Bridal</h2>
+                    <button onClick={()=>handleOptionClick(1)} className="card service-option "  > 
+                        <div className="card-body" >
+                            <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid" />
+                            <p>Bridal</p>
+                        </div>
                     </button>
                 </div>
 
                 <div className={"col-md-2 mt-2 mb-3 " + (optionSelected.party?"mystyle":"")}>
-                    <button onClick={()=>handleOptionClick(2)} className="service-option-1" > 
-                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid"/>
-                    <h2>Party</h2>
+                    <button onClick={()=>handleOptionClick(2)} className="card service-option " > 
+                    <div className="card-body" >
+                            <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid" />
+                            <p>Party</p>
+                        </div>
                     </button>
                 </div>
                
                 <div className={"col-md-2 mt-2 mb-3 " + (optionSelected.commercial?"mystyle":"")}>
-                    <button onClick={()=>handleOptionClick(3)} className="service-option-1" > 
-                    <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid"/>
-                    <h2>Commercial</h2>
+                    <button onClick={()=>handleOptionClick(3)} className="card service-option " > 
+                    <div className="card-body" >
+                            <img className="" alt="options" src="https://serviceform.com/sites/default/files/styles/serviceform_crop/public/bride2_2.png" className="img-fluid" />
+                            <p>Commercial</p>
+                        </div>
                     </button>
                 </div>
                
@@ -94,18 +100,14 @@ function Page1({select,display,currentData}) {
 
           </div>
 
-        <div className="row mt-2 ">
-            <div className="col-md-12">
-            <div >
-              <div id="continue" className="mb-3" aria-disabled="false">
-                <button onClick={()=>handleClick(optionSelected)} className="btn btn-primary">Continue</button>
-              </div>
-              {/* <hr className="hr" /> */}
-            </div>
-  
+        <div className="row my-4 ">
+            
+            <div className="col-md-12 text-center">
+                <button onClick={()=>handleClick(optionSelected)} className="btn btn-primary mx-5 ">Continue</button>
             </div>
         </div>
-        <div className="row">
+
+        <div className="row my-2">
             <div className="col-md-3">
             </div>
             <div className="col-sm-6">

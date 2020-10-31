@@ -14,7 +14,7 @@ function SelectDate({selectedDate ,Back}) {
     return (
         <div>
             <div className="row">
-                <div className="col-sm-12">
+                <div className="col-md-12 text-center">
                     <h4>When would you need the service?</h4>
                     <p> Set the date </p>
                 </div>
@@ -30,17 +30,17 @@ function SelectDate({selectedDate ,Back}) {
                 </div>
             </div>
         <div className="row mt-5">
-        <div className="col-sm-2"></div>
-            <div className="col-sm-2">
+        
+            <div className="col-md-4 my-2">
                 <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
             </div>
-            <div className="col-sm-5">
+            <div className="col-md-4 my-2">
                 <div className="progress">
                     <div className="progress-bar" role="progressbar" aria-valuenow="70" style={{width: "70%"}} aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <p>progress 70%</p>
             </div>
-            <div className="col-sm-3"></div>
+            <div className="col-md-4"></div>
         </div>
         </div>
     )

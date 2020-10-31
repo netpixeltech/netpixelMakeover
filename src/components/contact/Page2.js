@@ -76,12 +76,12 @@ function Page2({SendMessage,Back,currentData}) {
   };
 
   console.log("template",templateParams);
-  // emailjs.send('service_i5gpog3','template_vvk74yx', templateParams, 'user_14Fwr6tMEh2ZbllFx6k6G')
-  // .then((response) => {
-  //    console.log('SUCCESS!', response.status, response.text);
-  // }, (err) => {
-  //    console.log('FAILED...', err);
-  // });
+  emailjs.send('service_i5gpog3','template_vvk74yx', templateParams, 'user_14Fwr6tMEh2ZbllFx6k6G')
+  .then((response) => {
+     console.log('SUCCESS!', response.status, response.text);
+  }, (err) => {
+     console.log('FAILED...', err);
+  });
 
     SendMessage({refresh:true},1)
     
@@ -90,8 +90,14 @@ function Page2({SendMessage,Back,currentData}) {
     return (
       
        <div>
+          <div className="row text-center mb-3">
+            <div className="col-sm">
+                <h4>Your Contact Details</h4>
+                <p>only a booking request submission and non-binding for both parties.</p>
+            </div>
+          </div>
 
-      <div className="row">
+      <div className="row my-3">
          <div className="col-sm-12">    
              <form>
  
@@ -132,7 +138,9 @@ function Page2({SendMessage,Back,currentData}) {
                   id="message" rows="3"></textarea>
                </div>
  
-               <button  onClick={Send} className="btn btn-primary">Send</button>
+              <div className="form-group text-center">
+                  <button  onClick={Send} className="btn btn-primary px-5 py-2">SEND</button>
+              </div>
              </form>
              </div>
 
@@ -140,11 +148,10 @@ function Page2({SendMessage,Back,currentData}) {
 
 
         <div className="row mt-5">
-        <div className="col-sm-3"></div>
-            <div className="col-sm-2">
+            <div className="col-sm-4">
                 <button onClick={()=>Back(4)} type="button" className="btn btn-primary">Back</button>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-4">
                 <div className="progress">
                     <div className="progress-bar" role="progressbar" aria-valuenow="90" style={{width: "90%"}} aria-valuemin="0" aria-valuemax="100"></div>
                 </div>

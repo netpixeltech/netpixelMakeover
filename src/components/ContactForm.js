@@ -9,7 +9,7 @@ import SelectDate from './contact/SelectDate'
 import Time from './contact/Time'
 import MultiOcassion from './contact/MultiOcassion'
 import Venue from './contact/Venue'
-import emailjs from 'emailjs-com';
+
 function ContactForm() {
     const [formdata, setformData] = useState({})
     const [view, setview] = useState(1)
@@ -82,17 +82,32 @@ function ContactForm() {
 
 
     return (
-    <div>     
-        <div className="card mx-auto text-center contact-form-card">
+    <div className="py-5 bg-secondary ">  
+        <div className="col text-center py-4 text-light">
+            <h3 className=" mb-3">Make a booking request</h3>
+            <p className=" mb-4 ">Complete the booking request and we will connect to you</p>
+        </div>
+        
+        <div class="card my-5" style={{width: "70%",margin:"auto"}}>
+            <div class="card-body">
+                <div className="container-fluid">
+                    {display()}
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+        {/* <div className="card mx-auto text-center contact-form-card">
         <div className="card-body ">
-            <h3 className="card-title mb-3">Make a booking request</h3>
-            <h6 className="card-subtitle mb-4 text-muted">Complete the booking request and we will connect to you</h6>
+           
            
                     {display()}
                
             </div>
-            </div>
-        </div>
+            </div>*/}
+        </div> 
     )
 }
 

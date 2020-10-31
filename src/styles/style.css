@@ -110,23 +110,25 @@ body {
   }
   
 /* contact form card section */
+#page1 .card{
+  box-shadow: 5px 5px 5px #cccaca;
+}
 .card-body{
-  background: whitesmoke;
+  padding: 2rem;
 }
 
 
-
 .mystyle::after{
-    position: absolute;
-    height: 45px;
-    width: 45px;
-    content: "✓";
-    top: -20px;
-    right: 5px;
-    font-size: 30px;
-    color: white;
-    background: rgb(253, 182, 182);
-    border-radius: 15px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  content: "\2713";
+  top: -10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  background: rgb(4, 109, 236);
+  border-radius: 10px;
   }
   form{
     width: 40%;

@@ -8,8 +8,8 @@ function Contact() {
     const [ data, setData] = useState({
         name:"",
         email:"",
-        phone:0,
-        message:""
+        message:"",
+        phone:""
     })
 
    const handleChange =(e)=>{
@@ -18,15 +18,21 @@ function Contact() {
        })
    }
    const handleSubmit = (e)=>{
-    // e.preventDefault();
+    e.preventDefault();
 
        console.log(data);
-    //    emailjs.send('service_i5gpog3','template_2nz3d6g', data, 'user_14Fwr6tMEh2ZbllFx6k6G')
-    //    .then((response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //    }, (err) => {
-    //       console.log('FAILED...', err);
-    //    });
+       emailjs.send('service_i5gpog3','template_2nz3d6g', data, 'user_14Fwr6tMEh2ZbllFx6k6G')
+       .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+       }, (err) => {
+          console.log('FAILED...', err);
+       });
+
+       setData({
+        name:"",
+       email:"",
+       message:"",
+    phone:""})
       
    }
 
