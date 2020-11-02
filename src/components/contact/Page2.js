@@ -2,6 +2,9 @@ import React,{useState} from 'react'
 import 'react-phone-number-input/style.css'
 import emailjs from 'emailjs-com';
 import PhoneInput from "react-phone-number-input"
+import BottomProgress from "./BottomProgress"
+import Question from './Question'
+
 function Page2({SendMessage,Back,currentData}) {
 
   const [value, setValue] = useState()
@@ -90,16 +93,18 @@ function Page2({SendMessage,Back,currentData}) {
     return (
       
        <div>
-          <div className="row text-center mb-3">
+
+<Question header={"Your Contact Details"} subheader={"only a booking request submission and non-binding for both parties."} />
+          {/* <div className="row text-center mb-3">
             <div className="col-sm">
                 <h4>Your Contact Details</h4>
                 <p>only a booking request submission and non-binding for both parties.</p>
             </div>
-          </div>
+          </div> */}
 
-      <div className="row my-3">
-         <div className="col-sm-12">    
-             <form>
+      <div id="contact-detail" className="row my-3">
+         <div className="col-md-12" >    
+             <form className="mx-auto" >
  
                <div className="form-group">
                  <label >Your Full Name</label>
@@ -115,9 +120,10 @@ function Page2({SendMessage,Back,currentData}) {
                <label >Your Phone No.</label>
               
                <PhoneInput
-      placeholder="Enter phone number"
-      value={value}
-      onChange={SetNumber}/>
+               defaultCountry="IN"
+                  placeholder="Enter phone number"
+                  value={value}
+                  onChange={SetNumber}/>
                 </div>
 
                <div className="form-group">
@@ -146,7 +152,7 @@ function Page2({SendMessage,Back,currentData}) {
 
          </div>
 
-
+{/* 
         <div className="row mt-5">
             <div className="col-sm-4">
                 <button onClick={()=>Back(4)} type="button" className="btn btn-primary">Back</button>
@@ -158,8 +164,9 @@ function Page2({SendMessage,Back,currentData}) {
                 <p>progress 90%</p>
             </div>
             <div className="col-sm-4"></div>
-        </div>
+        </div> */}
          
+         <BottomProgress Back={Back} backView={4} progress={"90%"} />
        </div>
     )
 }

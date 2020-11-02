@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import BottomProgress from "./BottomProgress"
+import Question from './Question'
 
 function Venue({selectedVenue,Back}) {
     const [venue, setVenue] = useState("")
@@ -11,12 +13,15 @@ function Venue({selectedVenue,Back}) {
 
     return (
         <div>
-        <div className="row">
+            <Question header={"Give an address for the Bridal make-up"} subheader={"Type your venue address below"} />
+        {/* <div className="row">
             <div className="col-md text-center">
                 <h4>Give an address for the Bridal make-up</h4>
                 <p>Type your venue address below </p>
             </div>
-        </div>
+        </div> */}
+
+
         <div className="row">
         <div className="col-md-4"></div>
             <div className="col-md-4">
@@ -36,19 +41,7 @@ function Venue({selectedVenue,Back}) {
             </div>
         </div>
 
-    <div className="row my-5">
-    
-        <div className="col-md-4 my-2">
-              <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
-        </div>
-        <div className="col-md-4 my-2">
-              <div className="progress">
-                <div className="progress-bar" role="progressbar" aria-valuenow="60" style={{width: "60%"}} aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <p>progress 60%</p>
-        </div>
-        <div className="col-md-4"></div>
-    </div>
+        <BottomProgress Back={Back} backView={3} progress={"60%"} />
     </div>
 
     )

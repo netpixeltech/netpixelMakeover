@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import Calendar from "react-calendar"
 import 'react-calendar/dist/Calendar.css';
+import BottomProgress from "./BottomProgress"
+import Question from './Question'
 
 function SelectDate({selectedDate ,Back}) {
     const [selectDate, setdate] = useState(new Date())
@@ -13,12 +15,15 @@ function SelectDate({selectedDate ,Back}) {
     
     return (
         <div>
-            <div className="row">
+
+<Question header={"When would you need the service?"} subheader={"Set the date"} />
+ 
+            {/* <div className="row">
                 <div className="col-md-12 text-center">
                     <h4>When would you need the service?</h4>
                     <p> Set the date </p>
                 </div>
-            </div>
+            </div> */}
 
             <div className="row mt-2">
                 <div className="col-md-12">
@@ -29,7 +34,7 @@ function SelectDate({selectedDate ,Back}) {
                     />
                 </div>
             </div>
-        <div className="row mt-5">
+        {/* <div className="row mt-5">
         
             <div className="col-md-4 my-2">
                 <button onClick={()=>Back(3)} type="button" className="btn btn-primary">Back</button>
@@ -41,7 +46,9 @@ function SelectDate({selectedDate ,Back}) {
                 <p>progress 70%</p>
             </div>
             <div className="col-md-4"></div>
-        </div>
+        </div> */}
+
+        <BottomProgress Back={Back} backView={3} progress={"70%"} />
         </div>
     )
 }

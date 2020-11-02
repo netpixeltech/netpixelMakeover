@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family:'Cormorant Garamond', sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
     color: #62698d; 
   }
 
@@ -26,6 +26,7 @@ body {
   }
   nav ul{
     margin: 0 auto;
+    font-size: 16px;
   }
   .navbar .nav-link{
     margin: 1rem;
@@ -110,50 +111,59 @@ body {
   }
   
 /* contact form card section */
+
+.booking-request-card .btn{
+  background-color: #EB8D95 !important;
+}
+
+
+
 #page1 .card{
   box-shadow: 5px 5px 5px #cccaca;
 }
-.card-body{
-  padding: 2rem;
-}
+
 
 
 .mystyle::after{
   position: absolute;
   height: 25px;
   width: 25px;
-  content: "\2713";
+  content: "✓";
   top: -10px;
-  right: 10px;
+  right: 0px;
   font-size: 20px;
   color: white;
-  background: rgb(4, 109, 236);
-  border-radius: 10px;
+  background:#EB8D95;
+  border-radius: 15px;
   }
+
   form{
     width: 40%;
     margin: auto;
   }
   .react-calendar{
     margin: auto;
-    width: 60% !important;
+    width: 60rem;
     color:black !important;
   }
 
-  .react-calendar .react-calendar__month-view__days button{
-    margin: 0.5rem !important;
-  }
+  /* .react-calendar .react-calendar__month-view__days button{
+    padding: 1.1rem !important;
+  } */
 
   #time .row{
     margin: 1rem;
   }
   #time{
-    width:35%;
+    text-align: center;
     margin: auto;
+    width:40%;
     border: 1px solid;
   }
   
  
+
+
 
 
   .contact .row{
@@ -194,4 +204,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+
+  @media screen and (max-width:480px){
+    .booking-request-card{
+      width: 99% !important;
+    }
+    #time{
+      width: 100% !important;
+    }
+    #contact-detail form{
+      width: 100%;
+    }
   }

@@ -9,10 +9,11 @@ import SelectDate from './contact/SelectDate'
 import Time from './contact/Time'
 import MultiOcassion from './contact/MultiOcassion'
 import Venue from './contact/Venue'
+import Artist from './contact/Artist'
 
 function ContactForm() {
     const [formdata, setformData] = useState({})
-    const [view, setview] = useState(1)
+    const [view, setview] = useState(12)
 
     // const options =(data,next)=>{
     //     setformData({...formdata,...data}); 
@@ -37,7 +38,7 @@ function ContactForm() {
         console.log("formdata=>",formdata);
         console.log("viewNo=>",view);
         if (view===1) {
-            return <Page1 select={handleSubmit} currentData={formdata} />
+            return <Page1 select={handleSubmit} currentData={formdata} Back={Back}/>
         }
 
         if(view===2){
@@ -75,6 +76,9 @@ function ContactForm() {
         if (view === 11) {
             return <Page2 Back={Back} SendMessage={handleSubmit} currentData={formdata} />
         }
+        if (view === 12) {
+           return <Artist select={handleSubmit} />
+        }
        
     }
 
@@ -87,9 +91,9 @@ function ContactForm() {
             <h3 className=" mb-3">Make a booking request</h3>
             <p className=" mb-4 ">Complete the booking request and we will connect to you</p>
         </div>
-        
-        <div class="card my-5" style={{width: "70%",margin:"auto"}}>
-            <div class="card-body">
+        {/* #EB8D95 */}
+        <div className="card my-5 booking-request-card" style={{width: "50%",margin:"auto"}}>
+            <div className="card-body">
                 <div className="container-fluid">
                     {display()}
                 </div>

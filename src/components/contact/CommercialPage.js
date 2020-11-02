@@ -47,11 +47,11 @@ Commercial / Photoshoot?</h4>
         <div className="col-md-4">
               <button onClick={()=>Back(1)} type="button" className="btn btn-primary">Back</button>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 text-center">
               <div className="progress">
                 <div className="progress-bar" role="progressbar" aria-valuenow="18" style={{width: "18%"}} aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <p>progress 18%</p>
+              <p>COMPLETED 18%</p>
         </div>
         <div className="col-md-4"></div>
     </div>

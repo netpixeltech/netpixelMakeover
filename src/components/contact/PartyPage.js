@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import BottomProgress from "./BottomProgress"
+import Question from './Question'
 
 function BridalPage({selectedParty,Back}) {
 
@@ -23,34 +25,31 @@ function BridalPage({selectedParty,Back}) {
 
     return (
         <div  >
-            
-            <div className="row my-3">
+            <Question header={"Party: How many people need party make up?"} subheader={"Describe your requirements for party make up."} />
+ 
+            {/* <div className="row my-3">
                 <div className="col-md-12 text-center">
                     <h4>Party: How many people need party make up?</h4>
                     <p>Describe your requirements for party make up.</p>
                 </div>
-            </div>
+            </div> */}
            <form >
            <div className="row">
-               <div className="col-md-2 my-3"></div>
-                <div className="col-md-8">
+                <div className="col-md-12">
                 <div className="form-group">
                     <label >How many people need party make up?</label>
                     <input value={msg.noOfPartyPeople} onChange={handleChange} className="form-control" id="noOfPartyPeople" required={true}/>
                 </div>
                 </div>
-                <div className="col-md-2"></div>
             </div>
 
             <div className="row">
-                <div className="col-md-2"></div>
-                <div className="col-md-8">
+                <div className="col-md-12">
                 <div className="form-group">
                     <label >Describe the people who need make up</label>
                     <textarea value={msg.aboutPartyPeople} onChange={handleChange} className="form-control" id="aboutPartyPeople" rows="3" required={true}></textarea>
                 </div>
                 </div>
-                <div className="col-md-2"></div>
             </div>
 
 
@@ -64,7 +63,7 @@ function BridalPage({selectedParty,Back}) {
 
            </form>
            
-        <div className="row mt-5">
+        {/* <div className="row mt-5">
             <div className="col-md-4 my-2">
                   <button onClick={()=>Back(1)} type="button" className="btn btn-primary">Back</button>
             </div>
@@ -75,8 +74,9 @@ function BridalPage({selectedParty,Back}) {
                   <p>progress 15%</p>
             </div>
             <div className="col-md-4"></div>
-        </div>
+        </div> */}
 
+        <BottomProgress Back={Back} backView={1} progress={"17%"} />
         </div>
     )
 }
