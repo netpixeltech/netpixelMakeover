@@ -25,8 +25,8 @@ function Artist({select}) {
                 <div className="col-md-3 py-2 ">
                     <div onClick={()=>select({artist:"reveka"},1)} className="card" style={{width: ""}}>
                         <img className="card-img-top" src={revekaImg} alt="Card image cap" />
-                        <div className="card-body">
-                            <h5 className="card-title text-center">Reveka</h5>
+                        <div className="card-body" style={{padding:"0px"}}>
+                            <h6 className="card-title text-center my-2" >Reveka</h6>
                         </div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@ function Artist({select}) {
                 <div className="col-md-3 py-2">
                     <div onClick={()=>select({artist:"senior artist"},1)} className="card" style={{width: ""}}>
                         <img className="card-img-top" src={seniorImg} alt="Card image cap" />
-                        <div className="card-body">
-                            <h5 className="card-title text-center">Senior Artist</h5>
+                        <div className="card-body" style={{padding:"0px"}}>
+                            <h6 className="card-title text-center my-2">Senior Artist</h6>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ function Artist({select}) {
             </div>
             <div className="col-sm-6 py-3 text-center">
                   <div className="progress">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="5" style={{width: "5%"}} aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar" role="progressbar" aria-valuenow="5" style={{width: "5%",backgroundColor:"#EB8D95"}} aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                   <p>COMPLETED 5%</p>
             </div>

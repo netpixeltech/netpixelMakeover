@@ -40,23 +40,17 @@ function BridalPage({selectedParty,Back}) {
                     <label >How many people need party make up?</label>
                     <input value={msg.noOfPartyPeople} onChange={handleChange} className="form-control" id="noOfPartyPeople" required={true}/>
                 </div>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="col-md-12">
                 <div className="form-group">
                     <label >Describe the people who need make up</label>
-                    <textarea value={msg.aboutPartyPeople} onChange={handleChange} className="form-control" id="aboutPartyPeople" rows="3" required={true}></textarea>
+                    <textarea value={msg.aboutPartyPeople} onChange={handleChange} className="form-control" id="aboutPartyPeople" rows="2" required={true}></textarea>
                 </div>
                 </div>
             </div>
-
 
             <div className="row mt-2 my-3">
                 <div className="col-md-12 text-center">
                     <div id="continue" className="mb-3 " aria-disabled="false">
-                        <button type="submit" onClick={handleSubmit} className="btn btn-primary">Continue</button>
+                        <button type="submit" onClick={handleSubmit} className="btn ">Continue</button>
                     </div>
                 </div>
             </div>

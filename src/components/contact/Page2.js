@@ -145,7 +145,7 @@ function Page2({SendMessage,Back,currentData}) {
                </div>
  
               <div className="form-group text-center">
-                  <button  onClick={Send} className="btn btn-primary px-5 py-2">SEND</button>
+                  <button  onClick={Send} className="btn px-5 py-2">SEND</button>
               </div>
              </form>
              </div>
@@ -165,7 +165,6 @@ function Page2({SendMessage,Back,currentData}) {
             </div>
             <div className="col-sm-4"></div>
         </div> */}
-         
          <BottomProgress Back={Back} backView={4} progress={"90%"} />
        </div>
     )

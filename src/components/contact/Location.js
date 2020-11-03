@@ -4,7 +4,7 @@ import Question from './Question'
 
 function Location({handleVenue,Back}) {
     return (
-        <div>
+        <div id="location-type">
 
         <Question header={"Where do you need Bridal make-up?"} subheader={"Choose one that fits you the best."} />
         {/* <div className="row text-center mb-3">

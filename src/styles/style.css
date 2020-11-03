@@ -118,10 +118,13 @@ body {
 
 
 
-#page1 .card{
-  box-shadow: 5px 5px 5px #cccaca;
+#Occassion .card , #location-type .card, #page1 .card{
+  box-shadow: 8px 10px 5px #f1f1f1;
 }
 
+/* #Occassion .card{
+
+} */
 
 
 .mystyle::after{

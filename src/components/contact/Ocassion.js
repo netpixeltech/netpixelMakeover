@@ -31,7 +31,7 @@ const handleClick =(data)=>{
 }
 
     return (
-        <div>
+        <div id="Occassion">
 
 <Question header={"How many occasions would you like bridal make up for?"} subheader={"Choose one that fits you the best"} />
             {/* <div className="row text-center">

@@ -95,7 +95,7 @@ function Page1({select,display,currentData,Back}) {
                 <div onClick={()=>handleOptionClick(2)} className="card" style={{}}>
                         <img className="card-img-top" src={PartyIcon} alt="Card image cap" />
                         <div className="card-body text-center">
-                            <p className="card-title ">Party MakeUp</p>
+                            <p className="card-title">Party MakeUp</p>
                         </div>
                     </div>
                     {/* <button onClick={()=>handleOptionClick(2)} className="card service-option " > 

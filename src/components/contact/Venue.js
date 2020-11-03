@@ -23,20 +23,21 @@ function Venue({selectedVenue,Back}) {
 
 
         <div className="row">
-        <div className="col-md-4"></div>
-            <div className="col-md-4">
+        <div className="col-md-2"></div>
+            <div className="col-md-8">
             <div className="form-group">
-                <label >Full Address of the make-up?</label>
-                <textarea value={venue} onChange={handleChange} className="form-control" id="multipleLocation" rows="3"></textarea>
+                <label >Full Address of the make-up venue?</label>
+                <textarea value={venue} onChange={handleChange} className="form-control"
+                 id="multipleLocation" rows="2" placeholder=""></textarea>
             </div>
             </div>
-            <div className="col-md-4"></div>
+            <div className="col-md-2"></div>
         </div>
 
         <div className="row mt-2">
             <div className="col-md-12 text-center">
                 <div id="continue" className="mb-3" aria-disabled="false">
-                    <button onClick={()=>selectedVenue({venue},4)} className="btn btn-primary">Continue</button>
+                    <button onClick={()=>selectedVenue({venue},4)} className="btn">Continue</button>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ function BottomProgress({backView,progress,Back}) {
         </div>
         <div className="col-md-4 my-3 text-center">
               <div className="progress mx-auto">
-                <div className="progress-bar" role="progressbar" aria-valuenow={progress} style={{width: progress}} aria-valuemin="0" aria-valuemax="100"></div>
+                <div className="progress-bar" role="progressbar" aria-valuenow={progress} style={{width: progress,backgroundColor:"#EB8D95"}} aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <p>COMPLETED {progress}</p>
         </div>

@@ -58,7 +58,7 @@ function MultiOcassion({selectedMulti,Back,currentData}) {
                 <div className="col-md-12">
                     <div >
                     <div id="continue" className="mb-3 text-center">
-                        <button onClick={()=>handleClick(msg)} className="btn btn-primary">Continue</button>
+                        <button onClick={()=>handleClick(msg)} className="btn ">Continue</button>
                     </div>
                     {/* <hr className="hr" /> */}
                     </div>
